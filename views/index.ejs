@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Inventory App</h1>
+    <div>
+    <% items.forEach(function(user){ %>
+    <h3><%= user.item_name %></h3>
+    <p><%= user.item_description %></p>
+    <p>Quantity: <span><%= user.item_quantity %></span></p>
+    <a href="/update/<%= user.id %>">View</a>
+    <% }); %>
+    </div>
+  </body>
+</html>
