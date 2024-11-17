@@ -7,6 +7,6 @@ exports.indexGet = async (req, res) => {
       items: items,
     });
   } catch (err) {
-    res.status(500).send("Error fetching messages");
+    res.status(500).send("Error fetching items");
   }
 };

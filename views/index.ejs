@@ -7,12 +7,11 @@
   </head>
   <body>
     <h1>Inventory App</h1>
+    <%- include('partials/link.ejs'); %>
     <div>
     <% items.forEach(function(user){ %>
     <h3><%= user.item_name %></h3>
-    <p><%= user.item_description %></p>
-    <p>Quantity: <span><%= user.item_quantity %></span></p>
-    <a href="/update/<%= user.id %>">View</a>
+    <a href="/view/<%= user.id %>">View</a>
     <% }); %>
     </div>
   </body>
