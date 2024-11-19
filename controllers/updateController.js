@@ -2,7 +2,7 @@ const db = require("../db/queries");
 const { param, validationResult, body } = require("express-validator");
 
 const validateId = [
-  param("id").trim().notEmpty().isNumeric().withMessage("Id can not be empty."),
+  param("id").notEmpty().isNumeric().withMessage("Id can not be empty."),
 ];
 
 exports.updateItemGet = [
@@ -23,7 +23,7 @@ exports.updateItemGet = [
 ];
 
 const validateItem = [
-  param("id").trim().notEmpty().isNumeric().withMessage("id cannot be empty."),
+  param("id").notEmpty().isNumeric().withMessage("id cannot be empty."),
   body("itemName").notEmpty().withMessage("item name cannot be empty"),
   body("itemDescription").optional(),
   body("itemQuantity")

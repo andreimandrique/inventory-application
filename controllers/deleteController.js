@@ -2,7 +2,7 @@ const db = require("../db/queries");
 const { param, validationResult } = require("express-validator");
 
 const validateId = [
-  param("id").trim().notEmpty().isNumeric().withMessage("Id can not be empty."),
+  param("id").notEmpty().isNumeric().withMessage("Id can not be empty."),
 ];
 
 exports.deleteItem = [
