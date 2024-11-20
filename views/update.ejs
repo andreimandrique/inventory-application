@@ -9,19 +9,33 @@
 </head>
 <body>
     <h1>Update</h1>
+    
     <%- include('partials/link.ejs'); %>
     <%- include('partials/errors.ejs'); %>
-    <div>
+
+    <div class="center">
     <form action="/update/<%= item.id %>" method="post">
+
+      <div class="input-container">
       <label for="itemName">Item Name</label> 
-      <input type="text" name="itemName" value="<%= item.item_name %>" id="itemName"> <br>  <br>
-      <label for="itemDescription">Item Description</label> <br> 
+      <input type="text" name="itemName" value="<%= item.item_name %>" id="itemName"> 
+      </div>
+
+      <div class="input-container">
+      <label for="itemDescription">Item Description</label> 
       <textarea name="itemDescription" rows="4" cols="50" id="itemDescription">
-      <%= item.item_description %></textarea> <br> <br>
+      <%= item.item_description %></textarea> 
+      </div>
+
+      <div class="input-container">
       <label for="itemQuantity">Item Quantity</label>
-      <input type="number" name="itemQuantity" value="<%= item.item_quantity %>" id="itemQuantity"> <br> <br>
-      <button type="submit">Update Item</button>
+      <input type="number" name="itemQuantity" value="<%= item.item_quantity %>" id="itemQuantity"> 
+      </div>
+
+      <button type="submit" class="btn">Update Item</button>
+
     </form>
     </div>
+
 </body>
 </html>

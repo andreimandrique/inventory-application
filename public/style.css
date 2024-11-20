@@ -1,3 +1,58 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 h1 {
-  background-color: pink;
+  text-align: center;
+  padding: 1rem 1rem 1rem;
+}
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav > ul > li {
+  padding: 1rem;
+}
+nav > ul > li > a {
+  padding: 1rem;
+  text-decoration: none;
+}
+nav > ul > li > a:hover {
+  border: 1px solid black;
+}
+.error-container {
+  display: flex;
+  justify-content: center;
+}
+.error-container ul {
+  list-style-type: none;
+}
+.error-msg {
+  color: red;
+}
+.center {
+  display: flex;
+  justify-content: center;
+}
+.input-container {
+  margin-top: 1rem;
+  display: grid;
+}
+.btn {
+  margin-top: 1rem;
+  padding: 0.4rem 1rem 0.4rem;
+}
+.btn:hover {
+  cursor: pointer;
+}
+.title-container li {
+  margin-top: 1rem;
+}
+.view-title > h3 {
+  text-align: center;
+}
+.view-item {
+  margin-top: 1rem;
 }

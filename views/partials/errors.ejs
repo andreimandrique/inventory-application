@@ -1,8 +1,9 @@
-<!-- views/partials/errors.ejs -->
+<div class="error-container">
 <% if (locals.errors) {%>
   <ul>
     <% errors.forEach(function(error) { %>
-      <li><%= error.msg %></li>
+      <li class="error-msg"><%= error.msg %></li>
     <% }); %>
   </ul>
 <% } %>
+</div>

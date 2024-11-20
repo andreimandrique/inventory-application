@@ -9,12 +9,24 @@
   </head>
   <body>
     <h1>Inventory App</h1>
+
     <%- include('partials/link.ejs'); %>
-    <div>
-    <% items.forEach(function(user){ %>
-    <h3><%= user.item_name %></h3>
-    <a href="/view/<%= user.id %>">View</a>
-    <% }); %>
+    
+    <div class="center">
+
+      <div class="title-container">
+      <ol>
+          
+      <% items.forEach(function(user){ %>
+      <li>
+      <h3><%= user.item_name %></h3>
+      <a href="/view/<%= user.id %>">View</a>
+      </li>
+      <% }); %>
+          
+      </ol>
+      </div>
+
     </div>
   </body>
 </html>

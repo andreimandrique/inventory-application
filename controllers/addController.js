@@ -20,7 +20,6 @@ exports.addItem = [
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      console.log(errors);
       return res.render("add", { errors: errors.array() });
     }
     const { itemName, itemDescription, itemQuantity } = req.body;

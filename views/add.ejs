@@ -9,16 +9,32 @@
 </head>
 <body>
   <h1>Add</h1>
+  
   <%- include('partials/link.ejs'); %>
   <%- include('partials/errors.ejs'); %>
+
+  <div class="center">
   <form action="/add" method="post">
+
+  <div class="input-container">
   <label for="itemName">Item Name</label>
-  <input type="text" name="itemName" id="itemName"> <br> <br>
-  <label for="itemDescription">Item Description</label> <br>
-  <textarea name="itemDescription" id="itemDescription" rows="4" cols="50"></textarea> <br> <br>
+  <input type="text" name="itemName" id="itemName"> 
+  </div>
+
+  <div class="input-container">
+  <label for="itemDescription">Item Description</label> 
+  <textarea name="itemDescription" id="itemDescription" rows="4" cols="50" style="max-width:100%;"></textarea> 
+  </div>
+
+  <div class="input-container">
   <label for="itemQuantity">Item Quantity</label> 
-  <input type="text" name="itemQuantity" id="itemQuantity"> <br> <br>
-  <button type="submit">Add Item</button>
+  <input type="number" name="itemQuantity" id="itemQuantity"> 
+  </div>
+
+  <button type="submit" class="btn">Add Item</button>
+
   </form>
+  </div>
+
 </body>
 </html>
